@@ -387,7 +387,7 @@ a {
   left: 64px;
   line-height: 10px;
   background: #ed592b;
-  padding: 4px 50px 8px 50px;
+  padding: 8px 18px 13px 18px;
   border-radius: 4px;
   text-decoration: none; }
 
@@ -1090,7 +1090,7 @@ a {
 
   .main {
     padding-top: 5px;
-    background: none; }
+    /*background: none;*/ }
 
   .main-title {
     margin-bottom: 10px; }
