@@ -182,7 +182,7 @@ a {
   background: #4582c6;
   color: #fff; }
 
-.main-nav li a:hover {
+.main-nav li:hover a {
   background: #4582c6;
   color: #fff; }
 
