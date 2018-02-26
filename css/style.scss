@@ -135,7 +135,6 @@ a {
 	margin: 5px 0 19px -34px;
 }
 .main-nav li {
-	display: flex;
 	border-left: 1px solid #dbdde8;
 	border-top: 1px solid #dbdde8;
 	border-bottom: 1px solid #dbdde8;
@@ -145,34 +144,33 @@ a {
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.main-nav li:last-child {
-	border-left: 1px solid #dbdde8;
-	border-top: 1px solid #dbdde8;
-	border-bottom: 1px solid #dbdde8;
-	border-right: 1px solid #dbdde8;
+.main-nav li:last-child {	
+	border: 1px solid #dbdde8;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
-.my-credits {
+.main-nav-contant {
+	display: flex;
+}
+.my-credits a {
 	padding: 10px 21px 11px 15px;
 }
-.my-info {
+.my-info a {
 	padding: 10px 28px 11px 15px;
 }
-.my-cards {
+.my-cards a {
 	padding: 10px 41px 11px 15px;
 }
-.my-bonuses {
+.my-bonuses a {
 	padding: 10px 17px 11px 15px;
 }
-.my-history {
+.my-history a {
 	padding: 10px 19px 11px 15px;
 }
-.main-nav a {
+.main-nav p {
 	color: #393939;
 	font-size: 16px;
 	line-height: 15px;
-	text-decoration: none;
 	margin-left: 10px;
 	margin-top: 10px;
 }
@@ -184,15 +182,14 @@ a {
 .my-cards a {
 	color: #dbdde8;
 }
-.main-nav li:hover {
+.main-nav a:hover {
 	background: #4582c6;
 	color: #fff;
+	text-decoration: none;
 }
-.main-nav li:hover a {
-	background: #4582c6;
+.main-nav a:hover p {
 	color: #fff;
 }
-
 
 /* Слайдеры */
 
@@ -261,10 +258,6 @@ a {
  	font-size: 15px;
  	line-height: 18px;
 }
-
-
-
-
 .link-slide-info {
 	display: inline-block;
 	text-decoration: underline;
@@ -397,20 +390,21 @@ a {
 	text-align: center;
 }
 .bonuses-sistem-link {
+	display: inline-block;
 	position: absolute;
 	z-index: 3;
 	top: 238px;
 	left: 64px;
 	line-height: 10px;
 	background: #ed592b;
-	padding: 8px 18px 13px 18px;
+	padding: 11px 18px 13px 18px;
 	border-radius: 4px;
-	text-decoration: none;
-}
-.bonuses-sistem-link a {
 	font-size: 14px;
 	color: #fbfbfb;
+}
+.bonuses-sistem-link:hover{
 	text-decoration: none;
+	color: #fbfbfb;
 }
 
 /* Футер, обратная связь */
@@ -559,7 +553,7 @@ a {
 	font-size: 15px;
 	border: 1px solid #6da7c6;
 	border-radius: 4px;
-	padding: 7px 11px 9px 23px;
+	padding: 7px 23px 9px 23px;
 	display: inline-block;
 	text-decoration: none!important;
 	margin-top: 21px;
@@ -608,6 +602,9 @@ a {
 @media (min-width: 980px) and (max-width: 1200px) { 
 	img {
 		max-width: 100%;
+	}
+	.container {
+		width: 100%;
 	}
 	.header {
 		padding: 0;
@@ -734,6 +731,9 @@ a {
 	.header {
 		padding: 5px 0;
 	}
+	.container {
+		width: 100%;
+	}
 	.logo a {
 		margin-top: 50px;
 	}
@@ -765,6 +765,11 @@ a {
 	}
 	.main-title {
 		margin-bottom: 15px;
+		text-align: center;
+	}
+	.main-nav {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.owl-nav {
 		display: none;
@@ -774,15 +779,23 @@ a {
 		justify-content: center;
 	}
 	.level-and-bonuses li:first-child {
-		border-top-right-radius: 30px;
-		border-bottom-right-radius: 30px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
 		padding: 0;
 		border-right: 1px solid  #d7e9ff;
 	}
+	.level-and-bonuses li:first-child {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
 	.level-and-bonuses li:last-child {
-		border-top-left-radius: 30px;
-		border-bottom-left-radius:30px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
 		padding: 0;
+	}
+	.level-and-bonuses li:last-child {
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
 	}
 	.bonuses-img {
 		flex-direction: column;
@@ -809,7 +822,7 @@ a {
 	}
 	.bonuses-sistem-link {
 		position: static;
-		margin: 10px 0 0 45px;
+		margin: 10px 0 0 50px;
 		padding: 4px 80px 8px 25px;
 		line-height: 16px;
 	}
@@ -856,8 +869,12 @@ a {
 	.header {
 		padding: 5px 0;
 	}
+	.container {
+		max-width: 100%;
+	}
 	.logo a {
 		margin-top: 15px;
+		margin-left: 0;
 	}
 	.header-nav {
 		flex-wrap: wrap;
@@ -865,7 +882,7 @@ a {
 		margin-left: 0;
 	}
 	.header-nav li {
-		margin: 10px 8px;
+		margin: 10px 15px;
 	}
 	.rates a {
 		margin-top: 0;
@@ -873,7 +890,7 @@ a {
 	}
 	.account-btn {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: flex-start;
 	}
 	.account-btn i {
 		display: none;
@@ -892,10 +909,10 @@ a {
 	}
 	.search-form {
 		display: flex;
-		justify-content: flex-end;
 	}
 	.switch-lang {
 		margin-top: -15px;
+		margin-left: 10px;
 	}
 	.main {
 		padding-top: 5px;
@@ -905,10 +922,12 @@ a {
 	}
 	.main-title p {
 		font-size: 25px;
+		margin-left: 0px;
 	}
 	.main-nav {
 		display: block;
 		margin-left: -5px;
+		margin-bottom: 25px;
 	}
 	.main-nav li {
 		border-right: 1px solid #dbdde8
@@ -923,7 +942,7 @@ a {
 	}
 	.slids {
 		margin-left: 0;
-		padding-bottom: 5px;
+		padding-bottom: 25px;
 	}
 	.owl-nav {
 		display: none;
@@ -974,6 +993,7 @@ a {
 		display: flex;
 		justify-content: center;
 		margin-left: 0;
+		margin-bottom: 20px;
 	}
 	.bonuses-sistem-love {
 		position: static;
@@ -984,7 +1004,7 @@ a {
 	.bonuses-sistem-link {
 		position: static;
 		margin: 5px 0 11px 45px;
-		padding: 9px 57px 12px 34px;
+		padding: 9px 34px 12px 34px;
 		line-height: 16px;
 	}
 	.content-info {
@@ -993,38 +1013,47 @@ a {
     .about-us-nav {
     	display: flex;
     	flex-wrap: wrap;
-    	margin: 0 0 10px -33px;
+    	margin: 0 0 40px 0px;
     }
     .about-us-nav li {
     	margin-right: 25px;
     }
+    .about-us span {
+    	margin-left: 0px;
+    }
 	.questions span {
-		margin-left: -33px;
+		margin-left: 0px;
 	}
 	.questions-nav {
 		display: flex;
 		flex-wrap: wrap;
-    	margin: 0 0 10px -33px;
+    	margin: 0 0 40px 0px;
 	}
 	.questions li {
 		margin-right: 25px;
 	}
 	.return span {
-		margin-left: -33px;
+		margin-left: 0px;
 	}
 	.return-nav {
 		display: flex;
     	flex-wrap: wrap;
-    	margin: 0 0 10px -33px;
+    	margin: 0 0 40px 0px;
 	}
 	.return li {
 		margin-right: 25px;
+	}
+	.services-column-one span {
+		margin-left: 0px;
+	}
+	.services-column-one p {
+		margin-left: 0px;
 	}
 	.services-column-two p {
 		margin-top: 0;
 	}
 	.services-column-two p {
-		margin-left: -33px;
+		margin-left: 0px;
 	}
 	.contacts {
 		padding-top: 15px;
@@ -1034,17 +1063,18 @@ a {
     	justify-content: space-around;
 	}
 	.contacts span {
-		margin-left: 60px;
+		margin-left: 10px;
 	}
 	.line {
 		display: none;
 	}
 	.mobile-network {
-		margin-left: 50px;
+		margin-top: 1px;
+		margin-left: 0px;
 	}
 	.letter {
-		padding: 9px 11px 18px 11px;
-		margin: 23px 0 52px;
+		padding: 11px 11px 12px 11px;
+		margin: 4px 0 52px;
 	}
 	.footer {
 		padding-top: 5px;
@@ -1061,9 +1091,20 @@ a {
 		margin-top: 0;
 		margin-bottom: 10px;
 	}
+	.company-info {
+		display: flex;
+		flex-direction: column;
+	}
+	.logo-footer {
+		text-align: center;
+	}
 	.logo-footer-img {
 		max-width: 100%;
 		height: auto;
+		margin-left: 0px;
+	}
+	.small-info {
+		text-align: center;
 	}
 	.youtube {
 		margin: 0 -4px;
@@ -1072,39 +1113,42 @@ a {
 @media (min-width: 320px) and (max-width: 575px) {
 	.header {
 		padding: 5px 0;
-		border: none;
+	}	
+	.container {
+		width: 100%;
 	}
 	.logo a {
 		margin-top: 15px;
 		margin-left: 0;
 	}
 	.header-nav {
-		margin-top: 29px;
+		margin-top: 20px;
 		flex-wrap: wrap;
 		justify-content: center;
 		margin-left: 0;
 	}
 	.header-nav li {
-		margin: 10px 30px;
+		margin: 10px 20px;
 	}
 	.header-nav a {
-		font-size: 35px;
+		font-size: 20px;
 	}
 	.rates a {
 		margin-top: -9px;
-		padding: 20px 11px 21px 20px;
+		padding: 14px 11px 14px 20px;
 	}
 	.account-btn {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
+		margin-left: 0px;
 	}
 	.account-btn i {
 		display: none;
 	}
 	.account-btn a {
 		padding: 5px 18px 5px 15px;
-		margin: 7px 76 20px 10px;
-		font-size: 37px;
+		margin: 20px 0 0 0;
+		font-size: 20px;
 	}
 	.account-btn .drop-one {
 		top: 70px;
@@ -1116,17 +1160,16 @@ a {
 	}
 	.switch-lang {
 		margin-top: 10px;
-		font-size: 36px;
+		font-size: 20px;
 	}
 	.main {
 		padding-top: 5px;
-		/*background: none;*/
 	}
 	.main-title {
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
 	.main-title p {
-		font-size: 40px;
+		font-size: 30px;
 		margin-left: 0;
 	}
 	.main-nav {
@@ -1145,48 +1188,29 @@ a {
 		border-top-right-radius: 0px;
 		border-bottom-right-radius: 0px;
 	}
-	.main-nav a {
-		font-size: 40px;
-	}
-	.my-credits {
-	padding: 10px 21px 11px 15px;
-	}
-	.my-info, .my-cards, .my-bonuses, .my-history {
-		padding-top: 20px;
-		padding-bottom: 20px; 
+	.main-nav p {
+		font-size: 22px;
 	}
 	.slids {
 		margin-left: 0;
-		padding-bottom: 5px;
+		padding-bottom: 19px;
 	}
 	.slider-title {
 		font-size: 32px;
 	}
 	.slide-info p {
-		font-size: 23px;
+		font-size: 20px;
 		font-style: normal;
 	}
 	.slide span {
-		font-size: 28px;
+		font-size: 20px;
 		line-height: 34px;
-	}
-	.discounts {
-		padding: 45px 37px 50px 45px;
-	}
-	.all-money {
-		padding: 45px 37px 50px 45px;
-	}
-	.my-worck {
-		padding: 45px 37px 50px 45px;
-	}
-	.status {
-		padding: 45px 37px 50px 45px;
-	}
-	.botm {
-		padding: 45px 37px 50px 45px;
 	}
 	.owl-nav {
 		display: none;
+	}
+	.top-side-bar {
+		padding-right: 0px;
 	}
 	.level-and-bonuses {
 		display: flex;
@@ -1197,7 +1221,7 @@ a {
 	}
 	.level-and-bonuses li:first-child {
 		color: #0055b8;
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: bold;
 		background: #d7e9ff;
 		border-top-left-radius: 30px;
@@ -1208,7 +1232,7 @@ a {
 	}
 	.level-and-bonuses li:last-child {
 		color: #073b63;
-		font-size: 30px;
+		font-size: 22px;
 		background: #d7e9ff;
 		border-top-right-radius: 30px;
 		border-bottom-right-radius: 30px;
@@ -1239,34 +1263,39 @@ a {
 		display: flex;
 		justify-content: center;
 		margin-left: 0;
+		margin-bottom: 19px;
 	}
 	.bonuses-sistem-love {
 		position: static;
-		font-size: 30px;
-		margin-left: 6px;
+		font-size: 20px;
+		margin-left: 30px;
 		color: #073b63;
 		line-height: 35px;
 	}
 	.bonuses-sistem-link {
 		position: static;
-		font-size: 30px;
-		margin: 14px 5px 21px 45px;
-		padding: 40px 57px 27px 34px;
+		font-size: 25px;
+		line-height: 27px;
+		text-align: center;
+		margin: 32px 46px 40px 15px;
+		padding: 10px 20px 10px 20px;
 	}
 	.bonuses-sistem-link a {
 		font-size: 30px;
 	}
 	.content-info {
 		padding: 20px 0;
-		background: none;
 	}
 	.about-us span {
-		font-size: 40px;
+		font-size: 30px;
 		margin-left: 0;
-		color: #0073b1;
+		color: #fff;
+	}
+	.about-us {
+		margin-bottom: 15px;
 	}
     .about-us-nav {
-    	color: #0073b1;
+    	color: #fff;
     	display: flex;
     	flex-wrap: wrap;
     	margin: 10px 0 20px 0;
@@ -1275,14 +1304,17 @@ a {
     	margin-right: 25px;
     }
     .about-us-nav a {
-    	font-size: 35px;
+    	font-size: 25px;
     	line-height: 30px;
-    	color: #0073b1;
+    	color: #fff;
+    }
+    .questions {
+    	margin-bottom: 15px;
     }
 	.questions span {
-		font-size: 40px;
+		font-size: 30px;
 		margin-left: 0;
-		color: #0073b1;
+		color: #fff;
 	}
 	.questions-nav {
 		display: flex;
@@ -1293,14 +1325,17 @@ a {
 		margin-right: 25px;
 	}
 	.questions a {
-		font-size: 35px;
+		font-size: 25px;
     	line-height: 30px;
-    	color: #0073b1;
+    	color: #fff;
+	}
+	.return {
+		margin-bottom: 15px;
 	}
 	.return span {
-		font-size: 40px;
+		font-size: 30px;
 		margin-left: 0;
-		color: #0073b1;
+		color: #fff;
 	}
 	.return-nav {
 		display: flex;
@@ -1311,58 +1346,65 @@ a {
 		margin-right: 25px;
 	}
 	.return a {
-		font-size: 35px;
+		font-size: 25px;
     	line-height: 30px;
-    	color: #0073b1;
+    	color: #fff;
     }
+   	.services-column-one span {
+		font-size: 30px;
+		margin-left: 0;
+	}
 	.services-column-two p {
 		margin-top: 0;
-		color: #0073b1;
+		color: #fff;
 		margin-left: 0;
-		font-size: 35px;
-		line-height: 45px;
+		font-size: 25px;
+		line-height: 35px;
 	}
 	.services-column-one p {
-		color: #0073b1;
-		font-size: 35px;
-		line-height: 45px;
+		color: #fff;
+		font-size: 25px;
+		line-height: 35px;
 		margin-left: 0;
+		margin-bottom: 10px;
 	}
 	.contacts {
 		padding-top: 45px;
-		padding-left: 0;
+		padding-left: 10px;
 		display: flex;
     	flex-wrap: wrap;
     	justify-content: space-around;
 	}
+	.contacts span {
+		padding-right: 15px;
+	}
 	.free-nomber a {
 		margin-left: 0;
-		color: #0073b1;
-		font-size: 45px;
+		color: #fff;
+		font-size: 40px;
 	}
 	.contacts p {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.line {
 		display: none;
 	}
 	.mobile-network {
-		margin-top: 0;
+		margin-top: 15px;
 		margin-left: 0;
 	}
 	.mobile-network a {
-		color: #0073b1;
+		color: #fff;
 		font-size: 30px;
 	}
 	.letter {
-		padding: 9px 11px 18px 11px;
-		margin: 5px 0 85px;
-		color: #0073b1;
+		margin: 30px 0 60px 0;
+		color: #fff;
 		font-size: 25px;
+		text-align: crnter;
 	}
 	.footer {
-		padding-top: 20px;
-		background: none;
+		padding-top: 20px;		
 	}
 	.logo-footer-img {
 		display: none;
@@ -1374,9 +1416,9 @@ a {
 		margin: 15px 0;
 	}
 	.small-info p {
-		color: #0073b1;
-		font-size: 35px;
-		line-height: 40px;
+		color: #fff;
+		font-size: 25px;
+		line-height: 27px;
 	}
 	.social-nav {
 		flex-wrap: wrap;
@@ -1385,12 +1427,10 @@ a {
 		margin-bottom: 10px;
 	}
 	.social-nav i {
-		font-size: 40px;
-		color: #0073b1
+		font-size: 25px;
+		color: #fff
 	}
-	.youtube {
-		margin: 0 -4px;
-	}
+	
 }
 
 
