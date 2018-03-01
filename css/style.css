@@ -143,7 +143,7 @@ a {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
-.main-nav-contant {
+.main-nav-btn {
   display: flex; }
 
 .my-credits a {
@@ -366,7 +366,7 @@ a {
   margin-top: 18px;
   margin-left: 11px; }
 
-.bonuses-sistem-love {
+.bonuses-system-love {
   position: absolute;
   z-index: 3;
   top: 173px;
@@ -378,7 +378,7 @@ a {
   font-weight: bold;
   text-align: center; }
 
-.bonuses-sistem-link {
+.bonuses-system-link {
   display: inline-block;
   position: absolute;
   z-index: 3;
@@ -391,7 +391,7 @@ a {
   font-size: 14px;
   color: #fbfbfb; }
 
-.bonuses-sistem-link:hover {
+.bonuses-system-link:hover {
   text-decoration: none;
   color: #fbfbfb; }
 
@@ -462,54 +462,6 @@ a {
   line-height: 14px;
   text-decoration: none; }
 
-.free-nomber a {
-  display: inline-block;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #fff;
-  text-decoration: none; }
-
-.contacts {
-  padding-top: 13px;
-  padding-left: 110px;
-  margin-right: -31px; }
-
-.contacts span {
-  font-size: 15px;
-  line-height: 15px;
-  color: #fff;
-  font-weight: bold; }
-
-.contacts p {
-  font-size: 14 px;
-  line-height: 14px;
-  color: #a2c0da;
-  margin: 8px 0 7px 0; }
-
-.line {
-  max-width: 100%; }
-
-.mobile-network {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 13px; }
-
-.mobile-network li {
-  margin-bottom: 6px; }
-
-.mobile-network img {
-  margin-bottom: 5px;
-  margin-right: 16px; }
-
-.mobile-network a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding-top: 5px; }
-
 .services-column-one span {
   font-size: 15px;
   line-height: 15px;
@@ -533,7 +485,57 @@ a {
   margin-top: 32px;
   margin-left: 84px; }
 
-.letter {
+.contacts {
+  padding-top: 13px;
+  padding-left: 80px;
+  margin-right: -31px;
+  display: flex;
+  flex-direction: column; }
+
+.contacts span {
+  font-size: 15px;
+  line-height: 15px;
+  color: #fff;
+  font-weight: bold; }
+
+.contacts p {
+  font-size: 14 px;
+  line-height: 18px;
+  color: #a2c0da;
+  margin: 8px 0 7px 0; }
+
+.free-call a {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none; }
+
+.line {
+  max-width: 100%; }
+
+.contact-phones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 13px; }
+
+.contact-phones li {
+  margin-bottom: 6px; }
+
+.contact-phones img {
+  margin-bottom: 5px;
+  margin-right: 16px; }
+
+.contact-phones a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px; }
+
+.send-mail {
   color: #fff;
   font-weight: bold;
   font-size: 15px;
@@ -544,7 +546,7 @@ a {
   text-decoration: none !important;
   margin-top: 21px; }
 
-.letter:hover {
+.send-mail:hover {
   color: #fff; }
 
 /* ╨д╤Г╤В╨╡╤А, ╤Б╨╛╤Ж╨╕╨░╨╗╤М╨╜╤Л╨╡ ╤Б╨╡╤В╨╕ */
@@ -581,7 +583,7 @@ a {
   padding-top: 5px; }
 
 /* ╨а╨╡╤Б╨┐╨╛╨╜╤Б╨╕╨▓*/
-@media (min-width: 980px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   img {
     max-width: 100%; }
 
@@ -638,6 +640,12 @@ a {
   .main-nav a {
     font-size: 14px; }
 
+  .main-nav img {
+    margin-right: 4px; }
+
+  .main-nav p {
+    margin-left: 0; }
+
   .slids {
     padding-bottom: 30px; }
 
@@ -646,7 +654,7 @@ a {
 
   .owl-next {
     left: 670px;
-    bottom: 35px; }
+    bottom: 43px; }
 
   .top-side-bar {
     padding-right: 0; }
@@ -671,14 +679,14 @@ a {
   .five-thousand-bonuses {
     right: 15px; }
 
-  .bonuses-sistem-love {
+  .bonuses-system-love {
     top: 10px;
-    left: 5px;
+    left: -5px;
     color: #073b63; }
 
-  .bonuses-sistem-link {
+  .bonuses-system-link {
     top: 75px;
-    left: 35px; }
+    left: 25px; }
 
   .content-info {
     padding: 25px 0; }
@@ -701,12 +709,20 @@ a {
 
   .contacts {
     padding-top: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-left: 15px; }
 
   .small-info {
     line-height: 15px;
-    margin-left: 0; } }
-@media (min-width: 768px) and (max-width: 979px) {
+    margin-left: 0; }
+
+  .social {
+    padding-right: 30px; }
+
+  .social-nav {
+    flex-wrap: wrap;
+    justify-content: space-around; } }
+@media (min-width: 768px) and (max-width: 991px) {
   .header {
     padding: 5px 0; }
 
@@ -750,8 +766,12 @@ a {
     flex-wrap: wrap;
     justify-content: center; }
 
-  .owl-nav {
-    display: none; }
+  .owl-prev {
+    right: 500px; }
+
+  .owl-next {
+    left: 485px;
+    bottom: 40px; }
 
   .level-and-bonuses {
     flex-direction: column;
@@ -794,12 +814,12 @@ a {
     justify-content: center;
     margin-left: 0; }
 
-  .bonuses-sistem-love {
+  .bonuses-system-love {
     position: static;
     font-size: 14px;
     color: #073b63; }
 
-  .bonuses-sistem-link {
+  .bonuses-system-link {
     position: static;
     margin: 10px 0 0 50px;
     padding: 4px 80px 8px 25px;
@@ -867,7 +887,8 @@ a {
 
   .account-btn {
     display: flex;
-    justify-content: flex-start; }
+    justify-content: flex-end;
+    margin-right: 60px; }
 
   .account-btn i {
     display: none; }
@@ -885,10 +906,12 @@ a {
     font-size: 14px; }
 
   .search-form {
-    display: flex; }
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -13px; }
 
   .switch-lang {
-    margin-top: -15px;
+    margin-top: -48px;
     margin-left: 10px; }
 
   .main {
@@ -972,13 +995,13 @@ a {
     margin-left: 0;
     margin-bottom: 20px; }
 
-  .bonuses-sistem-love {
+  .bonuses-system-love {
     position: static;
     font-size: 14px;
     margin-left: 6px;
     color: #073b63; }
 
-  .bonuses-sistem-link {
+  .bonuses-system-link {
     position: static;
     margin: 5px 0 11px 45px;
     padding: 9px 34px 12px 34px;
@@ -1033,11 +1056,11 @@ a {
     margin-left: 0px; }
 
   .contacts {
-    padding-top: 15px;
-    padding-left: 0;
+    padding: 15px 100px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; }
+    justify-content: space-between;
+    flex-direction: row; }
 
   .contacts span {
     margin-left: 10px; }
@@ -1045,13 +1068,13 @@ a {
   .line {
     display: none; }
 
-  .mobile-network {
+  .contact-phones {
     margin-top: 1px;
     margin-left: 0px; }
 
-  .letter {
+  .send-mail {
     padding: 11px 11px 12px 11px;
-    margin: 4px 0 52px; }
+    margin: 4px 0 10px; }
 
   .footer {
     padding-top: 5px; }
@@ -1106,7 +1129,7 @@ a {
     margin: 10px 20px; }
 
   .header-nav a {
-    font-size: 20px; }
+    font-size: 15px; }
 
   .rates a {
     margin-top: -9px;
@@ -1123,7 +1146,7 @@ a {
   .account-btn a {
     padding: 5px 18px 5px 15px;
     margin: 20px 0 0 0;
-    font-size: 20px; }
+    font-size: 15px; }
 
   .account-btn .drop-one {
     top: 70px;
@@ -1135,7 +1158,7 @@ a {
 
   .switch-lang {
     margin-top: 10px;
-    font-size: 20px; }
+    font-size: 15px; }
 
   .main {
     padding-top: 5px; }
@@ -1144,7 +1167,7 @@ a {
     margin-bottom: 0px; }
 
   .main-title p {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0; }
 
   .main-nav {
@@ -1164,22 +1187,29 @@ a {
     border-bottom-right-radius: 0px; }
 
   .main-nav p {
-    font-size: 22px; }
+    font-size: 15px; }
 
   .slids {
     margin-left: 0;
     padding-bottom: 19px; }
 
   .slider-title {
-    font-size: 32px; }
+    font-size: 15px; }
 
   .slide-info p {
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal; }
 
+  .slide img {
+    margin-top: 5px;
+    margin-bottom: 0; }
+
   .slide span {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 34px; }
+
+  .discounts, .botm, .all-money, .my-worck, .status {
+    padding: 5px 37px 5px 45px; }
 
   .owl-nav {
     display: none; }
@@ -1196,7 +1226,7 @@ a {
 
   .level-and-bonuses li:first-child {
     color: #0055b8;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
     background: #d7e9ff;
     border-top-left-radius: 30px;
@@ -1207,7 +1237,7 @@ a {
 
   .level-and-bonuses li:last-child {
     color: #073b63;
-    font-size: 22px;
+    font-size: 15px;
     background: #d7e9ff;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -1218,10 +1248,10 @@ a {
     margin-right: 10px; }
 
   .bonuses span {
-    font-size: 30px; }
+    font-size: 15px; }
 
   .bonuses a {
-    font-size: 30px; }
+    font-size: 15px; }
 
   .bonuses-img {
     justify-content: center;
@@ -1240,34 +1270,28 @@ a {
     margin-left: 0;
     margin-bottom: 19px; }
 
-  .bonuses-sistem-love {
+  .bonuses-system-love {
     position: static;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 30px;
     color: #073b63;
     line-height: 35px; }
 
-  .bonuses-sistem-link {
+  .bonuses-system-link {
     position: static;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 27px;
     text-align: center;
-    margin: 32px 46px 40px 15px;
+    margin: 10px 46px 10px 15px;
     padding: 10px 20px 10px 20px; }
 
-  .bonuses-sistem-link a {
-    font-size: 30px; }
-
   .content-info {
-    padding: 20px 0; }
+    padding: 15px 0; }
 
   .about-us span {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0;
     color: #fff; }
-
-  .about-us {
-    margin-bottom: 15px; }
 
   .about-us-nav {
     color: #fff;
@@ -1279,15 +1303,12 @@ a {
     margin-right: 25px; }
 
   .about-us-nav a {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 30px;
     color: #fff; }
 
-  .questions {
-    margin-bottom: 15px; }
-
   .questions span {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0;
     color: #fff; }
 
@@ -1300,15 +1321,12 @@ a {
     margin-right: 25px; }
 
   .questions a {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 30px;
     color: #fff; }
 
-  .return {
-    margin-bottom: 15px; }
-
   .return span {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0;
     color: #fff; }
 
@@ -1321,24 +1339,24 @@ a {
     margin-right: 25px; }
 
   .return a {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 30px;
     color: #fff; }
 
   .services-column-one span {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0; }
 
   .services-column-two p {
     margin-top: 0;
     color: #fff;
     margin-left: 0;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 35px; }
 
   .services-column-one p {
     color: #fff;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 35px;
     margin-left: 0;
     margin-bottom: 10px; }
@@ -1353,33 +1371,30 @@ a {
   .contacts span {
     padding-right: 15px; }
 
-  .free-nomber a {
+  .free-call a {
     margin-left: 0;
     color: #fff;
-    font-size: 40px; }
+    font-size: 25px; }
 
   .contacts p {
-    font-size: 25px; }
+    font-size: 15px; }
 
   .line {
     display: none; }
 
-  .mobile-network {
+  .contact-phones {
     margin-top: 15px;
     margin-left: 0; }
 
-  .mobile-network a {
+  .contact-phones a {
     color: #fff;
-    font-size: 30px; }
+    font-size: 20px; }
 
-  .letter {
+  .send-mail {
     margin: 46px 0 60px 0;
     color: #fff;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center; }
-
-  .footer {
-    padding-top: 20px; }
 
   .logo-footer-img {
     display: none; }
@@ -1392,7 +1407,7 @@ a {
 
   .small-info p {
     color: #fff;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 27px; }
 
   .social-nav {
@@ -1402,7 +1417,7 @@ a {
     margin-bottom: 10px; }
 
   .social-nav i {
-    font-size: 25px;
+    font-size: 15px;
     color: #fff; } }
 
 /*# sourceMappingURL=style.css.map */
